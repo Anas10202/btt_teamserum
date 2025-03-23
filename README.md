@@ -15,5 +15,7 @@ In the real world, dermatology AI systems often underperform for individuals wit
 ## Data Exploration
 
 **Describe the dataset(s) used (i.e., the data provided in Kaggle + any additional sources)**  
+
 **Describe your data exploration and preprocessing approaches**  
+
 **Include at least 2–3 visualizations from your Exploratory Data Analysis**  
