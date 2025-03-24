@@ -1,8 +1,9 @@
 # btt_teamserum
 
-## Project Overview
+## **🏗️ Project Overview**
 
 **Describe the Kaggle competition and its connection to the Break Through Tech AI Program**  
+As part of the Break Through Tech AI Program, this Kaggle competition was in collaboration with the Algorithmic Justice League, an organization that highlights the social implications and harms of artificial intelligence. Our team applied our machine learning skills honed from the program to tackle this challenge on improving fairness in AI-driven dermatology diagnostics.
 
 **Describe the objective of the challenge**  
 The objective of the challenge is to build a machine learning model that can accurately classify 21 different skin conditions from images, while making sure that the model performs equitably across different skin tones. In addition to trying to achieve a strong overall accuracy, the challenge is focused on creating a model that is fair and mindful of performance across different skin tones, especially for groups that have been underrepresented in healthcare AI.
@@ -12,12 +13,11 @@ In the real world, dermatology AI systems often underperform for individuals wit
 
 
 
-## Data Exploration
+## **📊 Data Exploration**
 Before developing our model, we performed a thorough exploration of the dataset to gain insights into its structure, data quality, and any potential biases. A key part of this process was examining how the 21 skin conditions were distributed across the various Fitzpatrick skin tones. Understanding this representation was crucial to promoting fairness and shaping our preprocessing strategy.
 
 
 ## Dataset Description
-
 This project uses a subset of the **Fitzpatrick17k** dataset, which consists of approximately **4,500 images** representing **21 dermatological conditions** across diverse skin tones. The images are sourced from **DermaAmin** and **Atlas Dermatologico**, two widely used dermatology resources.
 
 ### Data Overview:
