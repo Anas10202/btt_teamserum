@@ -33,6 +33,13 @@ More details can be found in the [Kaggle competition page](https://www.kaggle.co
 
 
 ## Data Exploration & Preprocessing
+Before building our model, we conducted an in-depth exploration of the dataset to better understand its structure, quality, and potential sources of bias. Our primary focus was to investigate how well the 21 skin conditions were represented across the different Fitzpatrick skin tones. This step was essential for ensuring fairness and guiding preprocessing decisions.
+
+Key Insights:
+- We observed class imbalance among the 21 dermatological conditions, with some classes (e.g., acne vulgaris, atopic dermatitis) having significantly more images than others (e.g., squamous cell carcinoma).
+- The Fitzpatrick Skin Type distribution was skewed toward lighter skin tones (Types 1–3), which could introduce performance bias if not addressed.
+- Certain conditions were underrepresented in darker skin tones, highlighting a need for augmentation or weighting techniques to avoid model bias.
+- Through visual inspection and histogram analysis, we noticed some images varied greatly in brightness and contrast—especially across skin tones—reinforcing the importance of color normalization and contrast enhancement during preprocessing.
 
 ### Data Loading & Extraction
 - Mounted Google Drive and extracted the dataset ZIP file to `/content/dataset/BTT_Derm_Files`.
