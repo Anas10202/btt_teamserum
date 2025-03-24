@@ -18,7 +18,7 @@ Before developing our model, we performed a thorough exploration of the dataset 
 
 
 ## Dataset Description
-This project uses a subset of the **Fitzpatrick17k** dataset, which consists of approximately **4,500 images** representing **21 dermatological conditions** across diverse skin tones. The images are sourced from **DermaAmin** and **Atlas Dermatologico**, two widely used dermatology resources.
+This project uses a subset of the **Fitzpatrick17k** dataset, which consists of approximately **4,500 images** representing **21 dermatological conditions** across diverse skin tones. The images are associated with a FitzPatrick skin tone six point scale (FST) value, that refers to how distinct skin tones react to the sun. This value helps assess the model's performance across different skin tones. All the images are sourced from **DermaAmin** and **Atlas Dermatologico**, two widely used dermatology resources. 
 
 ### Data Overview:
 - **Source**: Fitzpatrick17k dataset  
