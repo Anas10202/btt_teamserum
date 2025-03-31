@@ -1,5 +1,14 @@
 # btt_teamserum
 
+## Team Members
+- **Anans Ahmed**
+- **Shannon Joseph**
+- **Cassandra Gomez**
+- **Ariana Smallwood**
+- **Pehal Obhan**
+
+We all worked closely together and organized calls to complete the project.
+  
 ## **🏗️ Project Overview**
 
 **Describe the Kaggle competition and its connection to the Break Through Tech AI Program**  
@@ -11,6 +20,67 @@ The objective of the challenge is to build a machine learning model that can acc
 **Explain the real-world significance of the problem and the potential impact of your work**  
 In the real world, dermatology AI systems often underperform for individuals with darker skin tones due to biased or incomplete training data. This contributes to misdiagnoses, delayed treatment, and unfair outcomes for marginalized communities. By creating a more equitable AI model, our goal was to reduce these differences and improve healthcare access and quality for everyone. It also shows the importance of inclusivity in AI.
 
+
+## **Project Highlights**
+- Built a machine learning model to recognize 21 different skin conditions using images from the Fitzpatrick17k dataset.
+- Adjusted image colors to make skin conditions easier to see, especially on darker skin tones.
+- Balanced the training data so the model could learn fairly from both common and rare conditions.
+- Created charts to better understand how the data was spread across different skin tones and conditions.
+- Focused on making sure the model worked well for all skin tones, not just the lighter ones.
+
+## ** 👩🏽‍💻 Setup & Execution **
+
+Follow these steps to run our project and reproduce the results:
+
+## Clone the Repository
+If working locally or on a platform like Kaggle Kernels, start by cloning the repo:
+```bash
+git clone https://github.com/your-username/btt_teamserum.git
+cd btt_teamserum
+
+## Install Dependencies
+We used Google Colab, which already includes most required libraries. If you're running locally, install the following packages:
+pip install numpy pandas matplotlib seaborn opencv-python scikit-learn tensorflow
+
+## Set Up the Environment
+To access the dataset in Google Colab:
+
+- First, mount your Google Drive by running this code in a cell:
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+- After mounting, make sure the dataset folder is located at:
+
+```
+/content/drive/MyDrive/BTT_Derm_Files/
+```
+
+This folder should contain all images and the `train.csv` metadata file.
+
+## Access the Dataset
+We used a subset of the **Fitzpatrick17k** dataset, provided through the competition. It contains:
+
+- `train.csv`: a CSV file with image labels and Fitzpatrick Skin Type values.
+- `images/`: a folder with approximately 4,500 images of skin conditions.
+
+Your folder structure should look like this:
+
+```
+BTT_Derm_Files/
+├── train.csv
+└── images/
+    ├── img_001.jpg
+    ├── img_002.jpg
+    └── ...
+```
+
+Make sure this folder is unzipped and correctly placed in your Google Drive for Colab to access it.
+
+## Run the notebook
+Open the project notebook (e.g., `BTT_TeamSerum_Model.ipynb`) and run each cell in order. 
 
 
 ## **📊 Data Exploration**
@@ -70,4 +140,30 @@ These steps ensure a **well-structured dataset** for model training while addres
 ![Visualization 1](https://drive.google.com/uc?export=view&id=1pNw4iKzEmQ5SrGuC1_yoZsgLfGW8eCeR)
 ![Visualization 2](https://drive.google.com/uc?export=view&id=1vAac9-c_u6h1zw3gpJ7FB-KbkLmxmr9W)
 ![Visualization 3](https://drive.google.com/uc?export=view&id=1uQcDOAcVPByvFfKNgrq9FMsA8BDdm01f)
+
+
+ ## Model Development
+- **Architecture:** CNN-based classification model (e.g., ResNet or EfficientNet) for image classification.
+- **Preprocessing:** Color enhancement, normalization, grayscale & heatmap visualizations.
+- **Fairness Techniques:** 
+  - Class reweighting using `compute_class_weight` to handle imbalanced classes.
+  - Image enhancement focused on improving clarity for FST Types V–VI.
+- **Optimization:**
+  - Loss Function: Categorical Crossentropy
+  - Optimizer: Adam
+  - Evaluation Metric: Weighted F1-score
  
+## 📈 Results & Key Findings
+- Model achieved decent overall F1-scores while maintaining more equitable performance across skin tones.
+- Visualizations showed reduced disparity in performance across Fitzpatrick scale groups compared to baseline.
+- Certain underrepresented classes remained difficult to classify accurately due to limited samples.
+
+## 💥 Impact Narrative
+Our project directly addresses bias in healthcare AI, a real-world issue that impacts diagnosis and treatment quality for patients with darker skin. Dermatology tools today often fail to generalize across diverse populations, exacerbating healthcare disparities. Through this project, we worked to create a model that is not only accurate but fair—helping pave the way for more inclusive and ethical AI applications in medicine. T
+
+## Next Steps & Future Improvements
+- Use synthetic augmentation or GANs to enhance representation for rare skin tones and conditions.
+- Work with dermatologists for real-world validation and feedback.
+- Make the model more accessible for use in remote or underserved areas.
+- Develop a fairness dashboard to continuously evaluate model performance across subgroups.
+
