@@ -1,7 +1,7 @@
 # btt_teamserum
 
 ## Team Members
-- **Anans Ahmed**
+- **Anas Ahmed**
 - **Shannon Joseph**
 - **Cassandra Gomez**
 - **Ariana Smallwood**
